@@ -1,0 +1,92 @@
+<html>
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100%;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            padding:20px;
+            flex-direction: column;
+            background: #003356;
+            color: #666;
+        }
+
+        .card{
+            background: #dddda9;
+            border-radius:20px;
+            width:100%;
+            max-width:650px;
+            padding:40px;
+            text-align:center;
+            font-size:22px;
+            border: 3px solid #115a44;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Регистрация</h2>
+        <br />
+        <div style="text-align:left;">
+        email: <input type="text" id="email" />
+        <br />
+        Имя: <input type="text" id="name"/>
+        <br />
+        Фамилия: <input type="text" id="surname"/>
+        <br />
+        Возраст: <input type="date" id="age"/>
+        <br />
+        Пол: 
+        <br />
+        Пароль: <input type="password" id="password" />
+        <br />
+        Повтор пароля: <input type="password" id="_password"/>
+        <br />
+        <input type="image" id="img"/>
+        <br />
+        <input type="checkbox" id="check"/> <i style="font-size:16px">Я даю своё согласие на обработку персональных данных</i>
+        <br />
+        <a id="alert" style="color:#f55"></a>
+            </div>
+        <button onclick="reg()">Регистрация</button>
+    </div>
+    <script>
+        function reg(){
+            if(document.getElementById("email").value == null){
+            document.getElementById("alert").innerHTML = "*не все поля заполнены";
+        }
+            if(document.getElementById("name").value == null){
+    document.getElementById("alert").innerHTML = "*не все поля заполнены";
+}
+            if(document.getElementById("surname").value == null){
+    document.getElementById("alert").innerHTML = "*не все поля заполнены";
+}
+            if(document.getElementById("age").value == null){
+    document.getElementById("alert").innerHTML = "*не все поля заполнены";
+}
+            if(document.getElementById("password").value == null){
+    document.getElementById("alert").innerHTML = "*не все поля заполнены";
+}
+            if(document.getElementById("_password").value != document.getElementById("password").value){
+    document.getElementById("alert").innerHTML = "*пароли не совпадают";
+}
+            if(document.getElementById("img").value == null){
+    document.getElementById("alert").innerHTML = "*не все поля заполнены";
+}
+            if(document.getElementById("check").value != true){
+    document.getElementById("alert").innerHTML = "*не все поля заполнены";
+}
+        }
+    </script>
+</body>
+</html>

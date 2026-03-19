@@ -1,0 +1,273 @@
+<html>
+<head>
+    <title>landing</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+    .sidepanel {
+    height: 100%; 
+    width: 0;
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden; 
+    overflow-y: clip;
+    padding-top: 60px; 
+    transition: 0.75s; 
+    }
+
+    
+    .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    }
+
+    
+    .sidepanel a:hover {
+    color: #ff0000;
+    }
+
+    
+    .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    }
+
+    .sidepanel .chtheme{
+        display:flex;
+        top:0;
+    }
+    .openbtn {
+    font-size: 30px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    align-items: start;
+    }
+
+    .openbtn:hover {
+    background-color: #aa00aa;
+    }
+
+    body{
+        min-height:100%;
+        display:flex;
+        flex-direction:column;
+        flex:1 0 auto;
+        height:100%;
+        background:#003356;
+        transition: 0.3s;
+        color: #aaa;
+    }
+
+    .downp{
+        flex-shrink:0;
+        padding:20px;
+        background:#333;
+        margin-top:auto;
+        text-decoration: none;
+    }
+        p {
+            color: #000;
+            font-size: 32px;
+        }
+        .slider {
+            align-self:center;
+            width: 70%;
+            overflow-x: auto;
+            overflow-y:hidden;
+            padding: 5px 0;
+            background: #a6ddaa;
+            border-radius:25px;
+            min-height:150px;
+        }
+
+        .container {
+            display: flex;
+            gap: 10px;
+            padding: 3px 5px;
+        }
+
+    .card{
+        min-width:250px;
+        padding:0px 5px;
+        background:#dddda9;
+        border-radius:5px;
+        overflow:hidden;
+        transition:transform 0.3s;
+        color:#444;
+    }
+    </style>
+</head>
+<body id="body">
+    <img scr="index_0.png" class="openbtn" onclick="openNav()" style="float:left" />
+    <h1 align="center" style="color: #000;">Главная страница</h1>
+    <div id="mySidepanel" class="sidepanel">
+        <div class="chtheme">
+            <a href="javascript:void(0)" id="d_theme" style="color: #eee" onclick="changetheme_d()">&diams;</a>
+            <a href="javascript:void(0)" id="l_theme" style="color: #111" onclick="changetheme_l()">&loz;</a>
+        </div>
+        <a href="registration.html">Регистрация</a>
+        <a href="#aut">Авторизация</a>
+        <a href="account.html">Личный кабинет</a>
+        <a href="#about">О нас</a>
+        <a href="#slider">Экскурсии</a>
+        <a>Поиск</a>
+        <a href="#footer">Контакты</a>
+    </div>
+
+    <div id="about">
+        <p>О нас</p>
+        Это компания, котораяпокажет вам истинные красоты, великой России.
+        <br />
+        Проведёт по лучшим местам, и самым красивым достопримечательностям Нижнего новгорода.
+        <br />
+        <img src="index_1.png" style="float:right" />
+        Мы водим экскурсии по всем частям новгорода, и пмножество экскурсий каждый день, ознакамливая людей с красотами России.
+    </div>
+    <div>
+        <p>Приветствие</p>
+        Приветствуем вас от имени -  и желаем вам наилучшего опыта в пользовании, и взаимодействии с нашим ресурсом!
+    </div>
+    <br />
+    <div style="background: #dddda9; border-radius:10px; max-width:350px; color:#444; align-self:center; padding:5px 10px" id="aut">
+        <p align="center">Авторизация</p>
+        email: <input type="email" />
+        <br />
+        password: <input type="password" />
+        <br />
+        <button>Вход</button> <a href="404.html">Восстановление пароля</a>
+    </div>
+    <br />
+    <div id="slider " class="slider">
+        <div class="container">
+            <div class="card">
+                <h3>Экскурсия 1</h3>
+                <img src="placeholder4.png" />
+                <br />
+                Захватывающая экскурсия от компании "Волжские просторы" по Нижнему новгороду
+                <br />
+                <a href="tour.html">подробнее</a>
+            </div>
+            <div class="card">
+                <h3>Экскурсия 2</h3>
+                <img src="index_2.png" />
+                <br />
+                Захватывающая экскурсия от компании "Волжские просторы" по Нижнему новгороду
+                <br />
+                <a href="404.html">подробнее</a>
+            </div>
+            <div class="card">
+                <h3>Экскурсия 3</h3>
+                <img src="index_3.png" />
+                <br />
+                Захватывающая экскурсия от компании "Волжские просторы" по Нижнему новгороду
+                <br />
+                <a href="404.html">подробнее</a>
+            </div>
+            <div class="card">
+                <h3>Экскурсия 4</h3>
+                <img src="index_4.png" />
+                <br />
+                Захватывающая экскурсия от компании "Волжские просторы" по Нижнему новгороду
+                <br />
+                <a href="404.html">подробнее</a>
+            </div>
+            <div class="card">
+                <h3>Экскурсия 5</h3>
+                <img src="index_5.png" />
+                <br />
+                Захватывающая экскурсия от компании "Волжские просторы" по Нижнему новгороду
+                <br />
+                <a href="404.html">подробнее</a>
+            </div>
+            <div class="card">
+                <h3>Экскурсия 6</h3>
+                <img src="index_6.png" />
+                <br />
+                Захватывающая экскурсия от компании "Волжские просторы" по Нижнему новгороду
+                <br />
+                <a href="404.html">подробнее</a>
+            </div>
+        </div>
+    </div>
+    <br />
+    <p>Комментарии</p>
+    <div id="comments" style="width: 70%; overflow-x: hidden; padding: 5px 0; background: #a6ddaa; border-radius: 25px; overflow-y: hidden; min-height: 120px;">
+        <div class="container">
+            <div class="card" style="background:none">
+                <img src="placeholder.png" /> автор_1
+                <br />
+                Текст восхищённого отзыва о экскурсии-конкурсе
+                <br />
+                <a href="tour.html">Ссылка на экскурсию</a>
+                <br />
+                01.01.1999
+            </div>
+            <div class="card" style="background:none">
+                <img src="placeholer.png" /> автор_2
+                <br />
+                Текст восхищённого отзыва о экскурсии-конкурсе
+                <br />
+                <a href="404.html">Ссылка на экскурсию</a>
+                <br />
+                01.01.1999
+            </div>
+            <div class="card" style="background:none">
+                <img src="placeholer.png" /> автор_3
+                <br />
+                Текст восхищённого отзыва о экскурсии-конкурсе
+                <br />
+                <a href="tour.html">Ссылка на экскурсию</a>
+                <br />
+                01.01.1999
+            </div>
+            <div class="card" style="background:none">
+                <img src="placeholder.png" /> автор_4
+                <br />
+                Текст восхищённого отзыва о экскурсии-конкурсе
+                <br />
+                <a href="404.html">Ссылка на экскурсию</a>
+                <br />
+                01.01.1999
+            </div>
+        </div>
+    </div>
+    <br />
+    <p align="center">Новости</p>
+    <div style="background: #dddda9; border-radius:10px; max-width:350px; color:#444; padding:5px 10px">
+        email: <input type="email" />
+        <br />
+        <input type="checkbox" /> я даю согласие на обработку персональных данных
+        <br />
+        <button>Подписаться</button>
+    </div>
+    <div class="downp" id="footer">
+        Телефон: 8 (800) 789-45-67
+        <br />
+        e-mail: <a href="volzhskie-prostory@mail.ru">volzhskie-prostory@mail.ru</a>
+        <br />
+        <a href="index.html">Главная</a>
+        <a href="registration.html">Регистрация</a>
+        <a href="account.html">Личный кабинет</a>
+        <a href="schedule.html">Экскурсии</a>
+        <a href="404.html">Страница не найдена</a>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
