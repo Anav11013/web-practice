@@ -27,6 +27,7 @@
             text-align:center;
             font-size:22px;
             border: 3px solid #115a44;
+            align-content:center;
         }
         
 
@@ -59,6 +60,20 @@
         <a id="alert" style="color:#f55"></a>
             </div>
         <button onclick="reg()">Регистрация</button>
+    </div>
+
+    <div class="card">
+        <button style="display:flex; align-self:center">+</button>
+        <button style="display:flex; align-self:center">-</button>
+        <h2>Добавить участника</h2>
+        <br />
+        Фамилия: <input type="text" id="surname" />
+        <br />
+        Имя: <input type="text" id="name" />
+        <br />
+        Возраст: <input type="date" id="age" />
+        <br />
+        Пол:
     </div>
     <script>
         function reg(){
